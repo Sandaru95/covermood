@@ -1,0 +1,73 @@
+/* ===================== Content */
+
+/* ================== 1. Globals */
+/* ================== 2. Body */
+/* ================== 3. Globals */
+/* ================== 4. Steps */
+
+/* ========================================== 1. Globals */
+.material-icons{
+    display: inline-flex !important;
+    vertical-align: top !important;
+}
+#hidden-audio{
+    display: none;
+}
+/* ========================================== 2. Body */
+body{
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: #ee6e73 !important;
+}
+/* ========================================== 3. Globals */
+a{
+    outline: none !important;
+}
+*:focus {outline: none;}
+*:active {outline: none;}
+h1, h2, h3, h4, h5, h6, p, a {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+.swal12-container input{
+    display: none !important;
+}
+
+/* ========================================= 4. Object Detail */
+#object-detail{
+    margin-top: 20px !important;
+    width: 70%;
+    margin: auto;
+    color: #fff !important;
+}
+#object-detail h1, h2, h3, h4, h5 {display: none;}
+#object-detail img{
+    display: none;
+    width: 50%;
+    float: left;
+    cursor: pointer;
+    transition: 1.2s all ease-in-out;
+}
+#object-detail img:hover{
+    transform: scale(1.05);
+}
+#object-detail #object-detail-action{
+    width: 49%;
+    float: left;
+    text-align: center;
+}
+#object-detail #object-detail-action a{
+    display: none;
+    margin-top: 25px;
+}
+#object-detail #object-detail-action h5:last-child{
+    display: none;
+    margin-top: 50% !important;
+}

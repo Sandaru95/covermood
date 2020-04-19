@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ object.music.name }} | CoverMood - Make Music Covers Online. Select Song And Sing Online</title>
+    {% load static %}
+    <!-- Material CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'libs/material/css/material.css' %}">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static 'libs/animate/animate.css' %}">
+    <!-- Alertify CSS -->
+    <link rel="stylesheet" href="{% static 'libs/alertify/main.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/alertify/theme.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'home/css/detail.css' %}">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo"><i class="material-icons">keyboard_voice</i>Cover Mood</a>
+                <ul class="right">
+                    <!-- Help Item On Top Nav -->
+                    <li><a><i class="material-icons" onclick="
+                    alertify.alert('Here is a detail page of a cover song. Here You can listen, download and like the cover song').set('resizable', true).set('basic', true);
+                ">help</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Object Detail  -->
+    <section id="object-detail">
+        <img src="{{ object.music.cover.url }}" id="object-detail-img">
+        <!-- Object Actions -->
+        <div id="object-detail-action">
+            <h4>{{ object.music.name }}</h4>
+            <br>
+            <!-- Play Button -->
+            <a class="btn red btn-large waves-effect waves-light" onclick="playCover(this)"><i class="material-icons">play_arrow</i></a>
+            <!-- Shot Button -->
+            <a class="btn red btn-large waves-effect waves-light" onclick="likeCover(this)"><i class="material-icons">whatshot</i></a>
+            <!-- Download Button -->
+            <a class="btn red btn-large waves-effect waves-light" onclick="downloadCover(this)"><i class="material-icons">file_download</i></a>
+            <h5>Sang By Unknown Person</h5>
+        </div>
+    </section>
+    <!-- Hidden Audio Player -->
+    <audio controls id="hidden-audio">
+        <source src="{{ object.combined_filepath }}" type="audio/mpeg">
+    </audio>
+    <!-- CSRF TOKEN FOR LATER -->
+    {% csrf_token %}
+    <!-- JS for later -->
+    <script>
+        let objMergedRecord = '{{ object.merged_record }}';
+        let objPk = {{ object.pk }};
+    </script>
+    <!-- Jquery -->
+    <script src="{% static 'libs/jquery/main.js' %}"></script>
+    <!-- Sweet Alert JS -->
+    <script src="{% static 'libs/sweetalert/sweetalert.js' %}"></script>
+    <!-- Alertify JS -->
+    <script src="{% static 'libs/alertify/alertify.js' %}"></script>
+    <!-- Material JS -->
+    <script src="{% static 'libs/material/js/min.js' %}"></script>
+    <!-- Inits -->
+    <script src="{% static 'home/js/init.js' %}"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'home/js/detail.js' %}"></script>
+</body>
+</html>

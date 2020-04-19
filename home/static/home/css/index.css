@@ -1,0 +1,158 @@
+/* ===================== Content */
+
+/* ================== 1. Globals */
+/* ================== 2. Body */
+/* ================== 3. Globals */
+/* ================== 4. Steps */
+
+/* ========================================== 1. Globals */
+.material-icons{
+    display: inline-flex !important;
+    vertical-align: top !important;
+}
+#hidden-audio{
+    display: none;
+}
+/* ========================================== 2. Body */
+body{
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: #ee6e73 !important;
+}
+/* ========================================== 3. Globals */
+a{
+    outline: none !important;
+}
+*:focus {outline: none;}
+*:active {outline: none;}
+h1, h2, h3, h4, h5, h6, p, a {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+.swal12-container input{
+    display: none !important;
+}
+/* ========================================== 4. Steps */
+/* ================================ */
+/* ::: Step 1 */
+#step-1-section{
+    display: none;
+}
+/* Img */
+#step-1-section #step-1-section-img{
+    width: 30%;
+    left: 35%;
+    position: absolute;
+    cursor: pointer;
+    transition: all ease-in-out 1.2s;
+}
+#step-1-section #step-1-section-img:hover{
+    transform: scale(1.05);
+}
+/* Select */
+#step-1-section .input-field{
+    position: absolute !important; 
+    left: 35% !important;
+    top: 50vh !important;
+    width: 30%;
+}
+/* Next */
+#step-1-section #step-1-next{
+    position: absolute !important;
+    right: 10px !important;
+    top: 65vh !important;
+    display: none;
+    float: right;
+}
+/* ================================ */
+/* ::: Step 2 */
+#step-2-section{
+    display: none;
+    width: 100% !important;
+}
+/* Chart */
+#step-2-section #step-2-chart{
+    width: 50% !important;
+    display: block;
+}
+/* Lyrics Collapsible */
+#step-2-section #step-2-collapsible{
+    width: 48% !important;
+    position: absolute !important;
+    top: 0;
+    left: 51%;
+}
+#step-2-section #step-2-collapsible #step-2-lyrics{color: #fff !important;}
+/* Record and Stop Buttons */
+#step-2-actions{
+    clear: both !important;
+    width: 50% !important;
+    display: block;
+    text-align: center !important;
+}
+#step-2-actions button:last-child{display: none;}
+/* ================================ */
+/* ::: Step 3 */
+#step-3-section{
+    display: none;
+    color: #fff !important;
+}
+#step-3-section form{
+    width: 60%;
+    margin: auto;
+}
+#step-3-section form input[type=range]{
+    border: 0 !important;
+}
+#step-3-section form input[type=range].active{
+    border: 0 !important;
+}
+/* Step 3 Actions */
+#step-3-section #step-3-actions{
+    clear: both;
+    text-align: center !important;
+    margin: auto !important;
+    width: 90 !important;
+}
+#step-3-section #step-3-actions button{
+    margin: auto;
+}
+/* ================================ */
+/* ::: Step 4 */
+#step-4-section{
+    display: none;
+    text-align: center;
+    color: #fff;
+}
+#step-4-section > a {
+    margin-top: 20px;
+}
+/* One Social Icon Div */
+#step-4-section #step-4-socials{
+    color: #fff !important;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+#step-4-section #step-4-socials a{
+    text-align: center !important;
+    padding-top: 5px;
+    width: 5%;
+}
+/* ========================================== 4. Running Batman */
+#running-batman{
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0;
+    display: none;
+}
+#running-batman img{
+    width: 30%;
+}
